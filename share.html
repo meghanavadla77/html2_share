@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    button{
+        height: 40px;
+        width: 40px;
+        background:none;
+        border: none;
+        outline: none;
+    }
+    button img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        
+    }
+</style>
+<body>
+    <div class="share">
+        <button onclick="sharePage('whatsapp')"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/767px-WhatsApp.svg.png" alt="whatsapp"></button>
+        <button onclick="sharePage('instagram')"> <img src="https://ichef.bbci.co.uk/ace/standard/976/cpsprodpb/E802/production/_89649395_instagram_logo_976.jpg" alt="instagram"></button>
+        <button onclick="sharePage('facebook')"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjvzC_QRv6moAhgNb5C6e3yicKgFND1g2RwA&s" alt="facebook"></button>
+        <button onclick="sharePage('twitter')"> <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="twitter"></button>
+        <button onclick="sharePage('mail')"> <img src="https://i.pinimg.com/736x/88/e1/4c/88e14cc7e7fcbb0e0e09de26cec86c61.jpg" alt="mail"></button>
+    </div>
+    <script>
+        let messege="Hello"
+        let socialMediaShare= 
+        {
+            'whatsapp':'https://web.whatsapp.com/'+messege,
+            'instagram':'https://www.instagram.com/accounts/login/?hl=en'+messege,
+            'facebook':'https://www.facebook.com/'+messege,
+            'twitter':'https://x.com/i/flow/single_sign_on'+messege,
+            'mail':'https://mail.google.com/mail/u/0/#inbox'+messege,
+            }
+            function sharePage(site){
+                window.open(socialMediaShare[site])
+
+
+            }
+
+    </script>
+</body>
+</html>
